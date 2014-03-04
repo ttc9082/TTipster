@@ -61,8 +61,8 @@
 		EA2AA21418C25059005AB606 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA2AA21618C25059005AB606 /* TTipsterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTipsterTests.m; sourceTree = "<group>"; };
 		EA2AA22618C3DA53005AB606 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		EA2AA22B18C3E200005AB606 /* TaxTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaxTableViewController.h; path = ../TaxTableViewController.h; sourceTree = "<group>"; };
-		EA2AA22C18C3E200005AB606 /* TaxTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaxTableViewController.m; path = ../TaxTableViewController.m; sourceTree = "<group>"; };
+		EA2AA22B18C3E200005AB606 /* TaxTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaxTableViewController.h; sourceTree = "<group>"; };
+		EA2AA22C18C3E200005AB606 /* TaxTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxTableViewController.m; sourceTree = "<group>"; };
 		EA2AA22E18C3FE6A005AB606 /* Tipster.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tipster.sqlite; sourceTree = "<group>"; };
 		EA2AA23B18C52D57005AB606 /* UpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateViewController.h; sourceTree = "<group>"; };
 		EA2AA23C18C52D57005AB606 /* UpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateViewController.m; sourceTree = "<group>"; };
@@ -207,8 +207,7 @@
 				EA2AA24C18C54D88005AB606 /* FMResultSet.h */,
 				EA2AA24D18C54D88005AB606 /* FMResultSet.m */,
 			);
-			name = FMDB;
-			path = src;
+			path = FMDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
