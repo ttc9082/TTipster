@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA2AA1E918C25058005AB606 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2AA1E818C25058005AB606 /* Foundation.framework */; };
+		EA2AA1EB18C25058005AB606 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2AA1EA18C25058005AB606 /* CoreGraphics.framework */; };
+		EA2AA1ED18C25058005AB606 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2AA1EC18C25058005AB606 /* UIKit.framework */; };
+		EA2AA1F318C25058005AB606 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA2AA1F118C25058005AB606 /* InfoPlist.strings */; };
+		EA2AA1F518C25058005AB606 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA1F418C25058005AB606 /* main.m */; };
+		EA2AA1F918C25058005AB606 /* TAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA1F818C25058005AB606 /* TAppDelegate.m */; };
+		EA2AA1FC18C25058005AB606 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2AA1FA18C25058005AB606 /* Main.storyboard */; };
+		EA2AA20418C25058005AB606 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA2AA20318C25058005AB606 /* Images.xcassets */; };
+		EA2AA20B18C25058005AB606 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2AA20A18C25058005AB606 /* XCTest.framework */; };
+		EA2AA20C18C25058005AB606 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2AA1E818C25058005AB606 /* Foundation.framework */; };
+		EA2AA20D18C25059005AB606 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2AA1EC18C25058005AB606 /* UIKit.framework */; };
+		EA2AA21518C25059005AB606 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA2AA21318C25059005AB606 /* InfoPlist.strings */; };
+		EA2AA21718C25059005AB606 /* TTipsterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA21618C25059005AB606 /* TTipsterTests.m */; };
+		EA2AA22718C3DA53005AB606 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2AA22618C3DA53005AB606 /* libsqlite3.dylib */; };
+		EA2AA22D18C3E200005AB606 /* TaxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA22C18C3E200005AB606 /* TaxTableViewController.m */; };
+		EA2AA22F18C3FE6A005AB606 /* Tipster.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = EA2AA22E18C3FE6A005AB606 /* Tipster.sqlite */; };
+		EA2AA23D18C52D57005AB606 /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA23C18C52D57005AB606 /* UpdateViewController.m */; };
+		EA2AA24118C5336A005AB606 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA24018C5336A005AB606 /* MainTableViewController.m */; };
+		EA2AA24E18C54D88005AB606 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA24418C54D88005AB606 /* FMDatabase.m */; };
+		EA2AA24F18C54D88005AB606 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA24618C54D88005AB606 /* FMDatabaseAdditions.m */; };
+		EA2AA25018C54D88005AB606 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA24818C54D88005AB606 /* FMDatabasePool.m */; };
+		EA2AA25118C54D88005AB606 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA24A18C54D88005AB606 /* FMDatabaseQueue.m */; };
+		EA2AA25318C54D88005AB606 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA24D18C54D88005AB606 /* FMResultSet.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA2AA20E18C25059005AB606 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA2AA1DD18C25058005AB606 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA2AA1E418C25058005AB606;
+			remoteInfo = TTipster;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA2AA1E518C25058005AB606 /* TTipster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTipster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA2AA1E818C25058005AB606 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EA2AA1EA18C25058005AB606 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EA2AA1EC18C25058005AB606 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EA2AA1F018C25058005AB606 /* TTipster-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TTipster-Info.plist"; sourceTree = "<group>"; };
+		EA2AA1F218C25058005AB606 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA2AA1F418C25058005AB606 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA2AA1F618C25058005AB606 /* TTipster-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TTipster-Prefix.pch"; sourceTree = "<group>"; };
+		EA2AA1F718C25058005AB606 /* TAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAppDelegate.h; sourceTree = "<group>"; };
+		EA2AA1F818C25058005AB606 /* TAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAppDelegate.m; sourceTree = "<group>"; };
+		EA2AA1FB18C25058005AB606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA2AA20318C25058005AB606 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EA2AA20918C25058005AB606 /* TTipsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTipsterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA2AA20A18C25058005AB606 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EA2AA21218C25059005AB606 /* TTipsterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TTipsterTests-Info.plist"; sourceTree = "<group>"; };
+		EA2AA21418C25059005AB606 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA2AA21618C25059005AB606 /* TTipsterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTipsterTests.m; sourceTree = "<group>"; };
+		EA2AA22618C3DA53005AB606 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		EA2AA22B18C3E200005AB606 /* TaxTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaxTableViewController.h; path = ../TaxTableViewController.h; sourceTree = "<group>"; };
+		EA2AA22C18C3E200005AB606 /* TaxTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaxTableViewController.m; path = ../TaxTableViewController.m; sourceTree = "<group>"; };
+		EA2AA22E18C3FE6A005AB606 /* Tipster.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tipster.sqlite; sourceTree = "<group>"; };
+		EA2AA23B18C52D57005AB606 /* UpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateViewController.h; sourceTree = "<group>"; };
+		EA2AA23C18C52D57005AB606 /* UpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateViewController.m; sourceTree = "<group>"; };
+		EA2AA23F18C5336A005AB606 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		EA2AA24018C5336A005AB606 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		EA2AA24318C54D88005AB606 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		EA2AA24418C54D88005AB606 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		EA2AA24518C54D88005AB606 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		EA2AA24618C54D88005AB606 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		EA2AA24718C54D88005AB606 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		EA2AA24818C54D88005AB606 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		EA2AA24918C54D88005AB606 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		EA2AA24A18C54D88005AB606 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		EA2AA24C18C54D88005AB606 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		EA2AA24D18C54D88005AB606 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA2AA1E218C25058005AB606 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA2AA22718C3DA53005AB606 /* libsqlite3.dylib in Frameworks */,
+				EA2AA1EB18C25058005AB606 /* CoreGraphics.framework in Frameworks */,
+				EA2AA1ED18C25058005AB606 /* UIKit.framework in Frameworks */,
+				EA2AA1E918C25058005AB606 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA2AA20618C25058005AB606 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA2AA20B18C25058005AB606 /* XCTest.framework in Frameworks */,
+				EA2AA20D18C25059005AB606 /* UIKit.framework in Frameworks */,
+				EA2AA20C18C25058005AB606 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA2AA1DC18C25058005AB606 = {
+			isa = PBXGroup;
+			children = (
+				EA2AA1EE18C25058005AB606 /* TTipster */,
+				EA2AA21018C25059005AB606 /* TTipsterTests */,
+				EA2AA1E718C25058005AB606 /* Frameworks */,
+				EA2AA1E618C25058005AB606 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA2AA1E618C25058005AB606 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA2AA1E518C25058005AB606 /* TTipster.app */,
+				EA2AA20918C25058005AB606 /* TTipsterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA2AA1E718C25058005AB606 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA2AA22618C3DA53005AB606 /* libsqlite3.dylib */,
+				EA2AA1E818C25058005AB606 /* Foundation.framework */,
+				EA2AA1EA18C25058005AB606 /* CoreGraphics.framework */,
+				EA2AA1EC18C25058005AB606 /* UIKit.framework */,
+				EA2AA20A18C25058005AB606 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA2AA1EE18C25058005AB606 /* TTipster */ = {
+			isa = PBXGroup;
+			children = (
+				EA2AA24218C54D88005AB606 /* FMDB */,
+				EA2AA23E18C52D65005AB606 /* ViewControllers */,
+				EA2AA22E18C3FE6A005AB606 /* Tipster.sqlite */,
+				EA2AA1FA18C25058005AB606 /* Main.storyboard */,
+				EA2AA20318C25058005AB606 /* Images.xcassets */,
+				EA2AA1EF18C25058005AB606 /* Supporting Files */,
+			);
+			path = TTipster;
+			sourceTree = "<group>";
+		};
+		EA2AA1EF18C25058005AB606 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA2AA1F718C25058005AB606 /* TAppDelegate.h */,
+				EA2AA1F818C25058005AB606 /* TAppDelegate.m */,
+				EA2AA1F018C25058005AB606 /* TTipster-Info.plist */,
+				EA2AA1F118C25058005AB606 /* InfoPlist.strings */,
+				EA2AA1F418C25058005AB606 /* main.m */,
+				EA2AA1F618C25058005AB606 /* TTipster-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA2AA21018C25059005AB606 /* TTipsterTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA2AA21618C25059005AB606 /* TTipsterTests.m */,
+				EA2AA21118C25059005AB606 /* Supporting Files */,
+			);
+			path = TTipsterTests;
+			sourceTree = "<group>";
+		};
+		EA2AA21118C25059005AB606 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA2AA21218C25059005AB606 /* TTipsterTests-Info.plist */,
+				EA2AA21318C25059005AB606 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA2AA23E18C52D65005AB606 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA2AA23F18C5336A005AB606 /* MainTableViewController.h */,
+				EA2AA24018C5336A005AB606 /* MainTableViewController.m */,
+				EA2AA22B18C3E200005AB606 /* TaxTableViewController.h */,
+				EA2AA22C18C3E200005AB606 /* TaxTableViewController.m */,
+				EA2AA23B18C52D57005AB606 /* UpdateViewController.h */,
+				EA2AA23C18C52D57005AB606 /* UpdateViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EA2AA24218C54D88005AB606 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				EA2AA24318C54D88005AB606 /* FMDatabase.h */,
+				EA2AA24418C54D88005AB606 /* FMDatabase.m */,
+				EA2AA24518C54D88005AB606 /* FMDatabaseAdditions.h */,
+				EA2AA24618C54D88005AB606 /* FMDatabaseAdditions.m */,
+				EA2AA24718C54D88005AB606 /* FMDatabasePool.h */,
+				EA2AA24818C54D88005AB606 /* FMDatabasePool.m */,
+				EA2AA24918C54D88005AB606 /* FMDatabaseQueue.h */,
+				EA2AA24A18C54D88005AB606 /* FMDatabaseQueue.m */,
+				EA2AA24C18C54D88005AB606 /* FMResultSet.h */,
+				EA2AA24D18C54D88005AB606 /* FMResultSet.m */,
+			);
+			name = FMDB;
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA2AA1E418C25058005AB606 /* TTipster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA2AA21A18C25059005AB606 /* Build configuration list for PBXNativeTarget "TTipster" */;
+			buildPhases = (
+				EA2AA1E118C25058005AB606 /* Sources */,
+				EA2AA1E218C25058005AB606 /* Frameworks */,
+				EA2AA1E318C25058005AB606 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TTipster;
+			productName = TTipster;
+			productReference = EA2AA1E518C25058005AB606 /* TTipster.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA2AA20818C25058005AB606 /* TTipsterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA2AA21D18C25059005AB606 /* Build configuration list for PBXNativeTarget "TTipsterTests" */;
+			buildPhases = (
+				EA2AA20518C25058005AB606 /* Sources */,
+				EA2AA20618C25058005AB606 /* Frameworks */,
+				EA2AA20718C25058005AB606 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA2AA20F18C25059005AB606 /* PBXTargetDependency */,
+			);
+			name = TTipsterTests;
+			productName = TTipsterTests;
+			productReference = EA2AA20918C25058005AB606 /* TTipsterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA2AA1DD18C25058005AB606 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = T;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = tongtianqi;
+				TargetAttributes = {
+					EA2AA20818C25058005AB606 = {
+						TestTargetID = EA2AA1E418C25058005AB606;
+					};
+				};
+			};
+			buildConfigurationList = EA2AA1E018C25058005AB606 /* Build configuration list for PBXProject "TTipster" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA2AA1DC18C25058005AB606;
+			productRefGroup = EA2AA1E618C25058005AB606 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA2AA1E418C25058005AB606 /* TTipster */,
+				EA2AA20818C25058005AB606 /* TTipsterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA2AA1E318C25058005AB606 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA2AA20418C25058005AB606 /* Images.xcassets in Resources */,
+				EA2AA22F18C3FE6A005AB606 /* Tipster.sqlite in Resources */,
+				EA2AA1F318C25058005AB606 /* InfoPlist.strings in Resources */,
+				EA2AA1FC18C25058005AB606 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA2AA20718C25058005AB606 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA2AA21518C25059005AB606 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA2AA1E118C25058005AB606 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA2AA1F518C25058005AB606 /* main.m in Sources */,
+				EA2AA1F918C25058005AB606 /* TAppDelegate.m in Sources */,
+				EA2AA22D18C3E200005AB606 /* TaxTableViewController.m in Sources */,
+				EA2AA24E18C54D88005AB606 /* FMDatabase.m in Sources */,
+				EA2AA24118C5336A005AB606 /* MainTableViewController.m in Sources */,
+				EA2AA25018C54D88005AB606 /* FMDatabasePool.m in Sources */,
+				EA2AA24F18C54D88005AB606 /* FMDatabaseAdditions.m in Sources */,
+				EA2AA25318C54D88005AB606 /* FMResultSet.m in Sources */,
+				EA2AA23D18C52D57005AB606 /* UpdateViewController.m in Sources */,
+				EA2AA25118C54D88005AB606 /* FMDatabaseQueue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA2AA20518C25058005AB606 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA2AA21718C25059005AB606 /* TTipsterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA2AA20F18C25059005AB606 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA2AA1E418C25058005AB606 /* TTipster */;
+			targetProxy = EA2AA20E18C25059005AB606 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA2AA1F118C25058005AB606 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA2AA1F218C25058005AB606 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EA2AA1FA18C25058005AB606 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA2AA1FB18C25058005AB606 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA2AA21318C25059005AB606 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA2AA21418C25059005AB606 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA2AA21818C25059005AB606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EA2AA21918C25059005AB606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA2AA21B18C25059005AB606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TTipster/TTipster-Prefix.pch";
+				INFOPLIST_FILE = "TTipster/TTipster-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EA2AA21C18C25059005AB606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TTipster/TTipster-Prefix.pch";
+				INFOPLIST_FILE = "TTipster/TTipster-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EA2AA21E18C25059005AB606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TTipster.app/TTipster";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TTipster/TTipster-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TTipsterTests/TTipsterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EA2AA21F18C25059005AB606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TTipster.app/TTipster";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TTipster/TTipster-Prefix.pch";
+				INFOPLIST_FILE = "TTipsterTests/TTipsterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA2AA1E018C25058005AB606 /* Build configuration list for PBXProject "TTipster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA2AA21818C25059005AB606 /* Debug */,
+				EA2AA21918C25059005AB606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA2AA21A18C25059005AB606 /* Build configuration list for PBXNativeTarget "TTipster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA2AA21B18C25059005AB606 /* Debug */,
+				EA2AA21C18C25059005AB606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA2AA21D18C25059005AB606 /* Build configuration list for PBXNativeTarget "TTipsterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA2AA21E18C25059005AB606 /* Debug */,
+				EA2AA21F18C25059005AB606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA2AA1DD18C25058005AB606 /* Project object */;
+}
