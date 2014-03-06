@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "sqlite3.h"
+
+@protocol taxReturnProtocol
+- (void) passSelectedTaxValue:(NSString *)taxRate;
+@end
+
 @interface TaxTableViewController : UITableViewController
 {
     sqlite3 *db;
 }
-
+@property (nonatomic,unsafe_unretained) id<taxReturnProtocol> delegate;
 @property (nonatomic,retain) NSMutableArray * stateEntries;
 @property (nonatomic,retain) NSMutableArray * taxEntries;
 -(NSString *)filePath;

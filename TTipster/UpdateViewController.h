@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MainTableViewController.h"
+
+
+@protocol passUpdateTimeProtocol
+- (void) passTime:(NSString *)time;
+@end
 
 @interface UpdateViewController : UIViewController
-
+@property (nonatomic, unsafe_unretained) id<passUpdateTimeProtocol> delegate;
 @end

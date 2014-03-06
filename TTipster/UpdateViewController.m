@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *underImageLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *TestImage;
 @property (strong, nonatomic) IBOutlet UILabel *updateTime;
+@property (strong, nonatomic) IBOutlet UILabel *pathLabel;
 @end
 
 @implementation UpdateViewController
@@ -65,7 +66,7 @@
     return filePath;
 }
 - (IBAction)update:(id)sender {
-    NSString *stringURL = @"http://www.tiantiangou99.com/static/images/ttq.jpg";
+    NSString *stringURL = @"https://s3.amazonaws.com/Tipster/social.jpg";
     NSURL  *url = [NSURL URLWithString:stringURL];
     NSData *urlData = [NSData dataWithContentsOfURL:url];
     if ( urlData )
@@ -82,6 +83,7 @@
         self.updateTime.text = currentTime;
         self.TestImage.image = [UIImage imageWithContentsOfFile:self.filePath];
         [self writeUpdateTime:currentTime];
+        [[self delegate]passTime:currentTime];
     }
 }
 
@@ -105,6 +107,7 @@
     self.TestImage.image = [UIImage imageWithContentsOfFile:filePath];
     if (self.TestImage.image) {
         self.underImageLabel.text = @"Congratulations!";
+        self.pathLabel.text = [filePath stringByAppendingString:@"  Stored!"];
     }else
         self.underImageLabel.text = @"";
 	// Do any additional setup after loading the view.

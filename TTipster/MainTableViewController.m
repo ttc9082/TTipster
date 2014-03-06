@@ -7,12 +7,24 @@
 //
 
 #import "MainTableViewController.h"
+#import "UpdateViewController.h"
+#import "TaxTableViewController.h"
 
 @interface MainTableViewController ()
-
 @end
 
+
 @implementation MainTableViewController
+@synthesize updateDBDetail;
+@synthesize taxDetail;
+
+-(void)passSelectedTaxValue:(NSString *)taxRate{
+    [[self taxDetail]setText:taxRate];
+}
+
+- (void)passTime:(NSString *)time{
+    [[self updateDBDetail]setText:time];
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,6 +44,17 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier]isEqualToString:@"updateSegue"]) {
+        UpdateViewController *UVC = [segue destinationViewController];
+        [UVC setDelegate:self];
+    }
+    else if([[segue identifier]isEqualToString:@"TaxSegue"]) {
+            TaxTableViewController *TVC = [segue destinationViewController];
+            [TVC setDelegate:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning
