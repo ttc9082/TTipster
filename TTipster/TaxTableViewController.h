@@ -13,7 +13,7 @@
 - (NSString *) passSelectedTaxValue:(NSString *)taxRate;
 @end
 
-@interface TaxTableViewController : UITableViewController
+@interface TaxTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 {
     sqlite3 *db;
 }
