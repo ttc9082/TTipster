@@ -10,7 +10,7 @@
 #import "sqlite3.h"
 
 @protocol taxReturnProtocol
-- (void) passSelectedTaxValue:(NSString *)taxRate;
+- (NSString *) passSelectedTaxValue:(NSString *)taxRate;
 @end
 
 @interface TaxTableViewController : UITableViewController

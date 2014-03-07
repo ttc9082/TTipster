@@ -116,7 +116,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self.delegate passSelectedTaxValue:[self.stateEntries objectAtIndex:indexPath.row]];
+    [self.delegate passSelectedTaxValue:[NSString stringWithFormat:@"%@(%@)",[self.stateEntries objectAtIndex:indexPath.row],[self.taxEntries objectAtIndex:indexPath.row]]];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

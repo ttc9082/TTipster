@@ -81,7 +81,6 @@
                     <connections>
                         <outlet property="taxDetail" destination="81y-vY-bfm" id="z4e-8a-qZd"/>
                         <outlet property="updateDBDetail" destination="sMg-6P-zJC" id="VhE-z5-Yas"/>
-                        <outlet property="updateDetail" destination="sMg-6P-zJC" id="yNP-oa-fC3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJp-sw-T88" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -207,7 +206,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HDA-pP-yeh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-686" y="289"/>
+            <point key="canvasLocation" x="-930" y="289"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

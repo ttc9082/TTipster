@@ -15,11 +15,10 @@
 
 
 @implementation MainTableViewController
-@synthesize updateDBDetail;
-@synthesize taxDetail;
 
--(void)passSelectedTaxValue:(NSString *)taxRate{
+-(NSString *)passSelectedTaxValue:(NSString *)taxRate{
     [[self taxDetail]setText:taxRate];
+    return taxRate;
 }
 
 - (void)passTime:(NSString *)time{
@@ -51,7 +50,7 @@
         UpdateViewController *UVC = [segue destinationViewController];
         [UVC setDelegate:self];
     }
-    else if([[segue identifier]isEqualToString:@"TaxSegue"]) {
+    else if([[segue identifier]isEqualToString:@"taxSegue"]) {
             TaxTableViewController *TVC = [segue destinationViewController];
             [TVC setDelegate:self];
     }
