@@ -14,7 +14,7 @@
 
 @interface MainTableViewController ()<CLLocationManagerDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *taxRateLabel;
-@property locationViewController *locationDetector;
+
 @end
 
 
