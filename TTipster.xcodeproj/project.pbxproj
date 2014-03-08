@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3304E46218CAC7A800F98DBA /* locationDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3304E46118CAC7A800F98DBA /* locationDetector.m */; };
 		3369931118CAB06300AAA753 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3369931018CAB06300AAA753 /* CoreLocation.framework */; };
+		33CFCFCC18CB0CDC00018F4F /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CFCFCB18CB0CDC00018F4F /* MainTableViewController.m */; };
 		EA2AA1E918C25058005AB606 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2AA1E818C25058005AB606 /* Foundation.framework */; };
 		EA2AA1EB18C25058005AB606 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2AA1EA18C25058005AB606 /* CoreGraphics.framework */; };
 		EA2AA1ED18C25058005AB606 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2AA1EC18C25058005AB606 /* UIKit.framework */; };
@@ -25,13 +27,11 @@
 		EA2AA22D18C3E200005AB606 /* TaxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA22C18C3E200005AB606 /* TaxTableViewController.m */; };
 		EA2AA22F18C3FE6A005AB606 /* Tipster.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = EA2AA22E18C3FE6A005AB606 /* Tipster.sqlite */; };
 		EA2AA23D18C52D57005AB606 /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA23C18C52D57005AB606 /* UpdateViewController.m */; };
-		EA2AA24118C5336A005AB606 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA24018C5336A005AB606 /* MainTableViewController.m */; };
 		EA2AA24E18C54D88005AB606 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA24418C54D88005AB606 /* FMDatabase.m */; };
 		EA2AA24F18C54D88005AB606 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA24618C54D88005AB606 /* FMDatabaseAdditions.m */; };
 		EA2AA25018C54D88005AB606 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA24818C54D88005AB606 /* FMDatabasePool.m */; };
 		EA2AA25118C54D88005AB606 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA24A18C54D88005AB606 /* FMDatabaseQueue.m */; };
 		EA2AA25318C54D88005AB606 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA24D18C54D88005AB606 /* FMResultSet.m */; };
-		EAB5167F18CAE70E008DF45C /* db.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB5167E18CAE70E008DF45C /* db.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3304E46018CAC7A800F98DBA /* locationDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = locationDetector.h; path = Location/locationDetector.h; sourceTree = "<group>"; };
+		3304E46118CAC7A800F98DBA /* locationDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = locationDetector.m; path = Location/locationDetector.m; sourceTree = "<group>"; };
 		3369931018CAB06300AAA753 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		33CFCFCB18CB0CDC00018F4F /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		EA2AA1E518C25058005AB606 /* TTipster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTipster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2AA1E818C25058005AB606 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA2AA1EA18C25058005AB606 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -70,7 +73,6 @@
 		EA2AA23B18C52D57005AB606 /* UpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateViewController.h; sourceTree = "<group>"; };
 		EA2AA23C18C52D57005AB606 /* UpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateViewController.m; sourceTree = "<group>"; };
 		EA2AA23F18C5336A005AB606 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
-		EA2AA24018C5336A005AB606 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		EA2AA24318C54D88005AB606 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		EA2AA24418C54D88005AB606 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		EA2AA24518C54D88005AB606 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -81,8 +83,6 @@
 		EA2AA24A18C54D88005AB606 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
 		EA2AA24C18C54D88005AB606 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		EA2AA24D18C54D88005AB606 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		EAB5167D18CAE70E008DF45C /* db.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = db.h; sourceTree = "<group>"; };
-		EAB5167E18CAE70E008DF45C /* db.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = db.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3304E46318CAC7DF00F98DBA /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				3304E46018CAC7A800F98DBA /* locationDetector.h */,
+				3304E46118CAC7A800F98DBA /* locationDetector.m */,
+			);
+			name = Location;
+			sourceTree = "<group>";
+		};
 		EA2AA1DC18C25058005AB606 = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +155,7 @@
 		EA2AA1EE18C25058005AB606 /* TTipster */ = {
 			isa = PBXGroup;
 			children = (
-				EAB5167918CAE583008DF45C /* db */,
+				3304E46318CAC7DF00F98DBA /* Location */,
 				EA2AA24218C54D88005AB606 /* FMDB */,
 				EA2AA23E18C52D65005AB606 /* ViewControllers */,
 				EA2AA22E18C3FE6A005AB606 /* Tipster.sqlite */,
@@ -191,8 +200,8 @@
 		EA2AA23E18C52D65005AB606 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				33CFCFCB18CB0CDC00018F4F /* MainTableViewController.m */,
 				EA2AA23F18C5336A005AB606 /* MainTableViewController.h */,
-				EA2AA24018C5336A005AB606 /* MainTableViewController.m */,
 				EA2AA22B18C3E200005AB606 /* TaxTableViewController.h */,
 				EA2AA22C18C3E200005AB606 /* TaxTableViewController.m */,
 				EA2AA23B18C52D57005AB606 /* UpdateViewController.h */,
@@ -216,15 +225,6 @@
 				EA2AA24D18C54D88005AB606 /* FMResultSet.m */,
 			);
 			path = FMDB;
-			sourceTree = "<group>";
-		};
-		EAB5167918CAE583008DF45C /* db */ = {
-			isa = PBXGroup;
-			children = (
-				EAB5167D18CAE70E008DF45C /* db.h */,
-				EAB5167E18CAE70E008DF45C /* db.m */,
-			);
-			name = db;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,15 +326,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33CFCFCC18CB0CDC00018F4F /* MainTableViewController.m in Sources */,
 				EA2AA1F518C25058005AB606 /* main.m in Sources */,
 				EA2AA1F918C25058005AB606 /* TAppDelegate.m in Sources */,
 				EA2AA22D18C3E200005AB606 /* TaxTableViewController.m in Sources */,
 				EA2AA24E18C54D88005AB606 /* FMDatabase.m in Sources */,
-				EAB5167F18CAE70E008DF45C /* db.m in Sources */,
-				EA2AA24118C5336A005AB606 /* MainTableViewController.m in Sources */,
 				EA2AA25018C54D88005AB606 /* FMDatabasePool.m in Sources */,
 				EA2AA24F18C54D88005AB606 /* FMDatabaseAdditions.m in Sources */,
 				EA2AA25318C54D88005AB606 /* FMResultSet.m in Sources */,
+				3304E46218CAC7A800F98DBA /* locationDetector.m in Sources */,
 				EA2AA23D18C52D57005AB606 /* UpdateViewController.m in Sources */,
 				EA2AA25118C54D88005AB606 /* FMDatabaseQueue.m in Sources */,
 			);

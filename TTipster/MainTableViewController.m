@@ -10,18 +10,18 @@
 #import "UpdateViewController.h"
 #import "TaxTableViewController.h"
 #import<CoreLocation/CoreLocation.h>
-#import "db.h"
+#import "locationDetector.h"
 
 
 @interface MainTableViewController ()<CLLocationManagerDelegate>
+@property (strong, nonatomic) IBOutlet UILabel *taxRateLabel;
+
 @end
 
 
 
 @implementation MainTableViewController{
-    CLLocationManager *manager;
-    CLGeocoder *geocoder;
-    CLPlacemark *placemark;
+    
 }
 
 -(NSString *)passSelectedTaxValue:(NSString *)taxRate{
@@ -45,19 +45,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    db *database = [[db alloc]init];
-//    manager = [[CLLocationManager alloc]init];
-//    geocoder = [[CLGeocoder alloc] init];
-//    manager.delegate = self;
-//    manager.desiredAccuracy = kCLLocationAccuracyBest;
-//    [manager startUpdatingLocation];
-    [self.taxDetail setText:[database getTaxRateFromAbb:@"NY"]];
+    locationDetector *locationControl = [[locationDetector alloc] init];
+    //[locationControl setManager:[[CLLocationManager alloc]init]];
+    //[locationControl setGeocoder:[[CLGeocoder alloc]init]];
+    //[[locationControl manager]setDelegate:self];
+    
+    [locationControl startUpdateLocation];
+    //[[locationControl manager] startUpdatingLocation];
+    NSLog(@"!!!!!!!");
+    self.taxRateLabel.text = locationControl.location;
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -153,38 +156,6 @@
 }
 
  */
-
-#pragma mark Methods
-
--(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
-    NSLog(@"Error: %@", error);
-    NSLog(@"Failed to get location@:");
-//    
-//    UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Sorry,we cannot get your current location" message:@"Would you like to point out your state for us?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK",nil];
-//    [alert show];
-}
-
--(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
-    
-    
-    CLLocation *currentLocation = newLocation;
-    
-    
-    [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
-        if (error ==nil &&[placemarks count]>0) {
-            placemark = [placemarks lastObject];
-            //
-            //            _location = placemark.locality;
-            //            //pass the value to the dedial label
-            //            [self.delegate changeLocation:_location];
-            //            self.cityLabel.text = [NSString stringWithFormat:@"City:%@ ",placemark.locality];
-            [self.taxDetail setText:placemark.administrativeArea];
-            //
-        }else{
-            NSLog(@"%@",error.debugDescription);
-        }
-    }];
-}
 
 
 
