@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3369931118CAB06300AAA753 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3369931018CAB06300AAA753 /* CoreLocation.framework */; };
-		33E3987518CAB639009374AF /* locationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E3987418CAB639009374AF /* locationViewController.m */; };
 		EA2AA1E918C25058005AB606 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2AA1E818C25058005AB606 /* Foundation.framework */; };
 		EA2AA1EB18C25058005AB606 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2AA1EA18C25058005AB606 /* CoreGraphics.framework */; };
 		EA2AA1ED18C25058005AB606 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2AA1EC18C25058005AB606 /* UIKit.framework */; };
@@ -47,8 +46,6 @@
 
 /* Begin PBXFileReference section */
 		3369931018CAB06300AAA753 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		33E3987318CAB639009374AF /* locationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = locationViewController.h; sourceTree = "<group>"; };
-		33E3987418CAB639009374AF /* locationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = locationViewController.m; sourceTree = "<group>"; };
 		EA2AA1E518C25058005AB606 /* TTipster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTipster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2AA1E818C25058005AB606 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA2AA1EA18C25058005AB606 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -194,8 +191,6 @@
 		EA2AA23E18C52D65005AB606 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				33E3987318CAB639009374AF /* locationViewController.h */,
-				33E3987418CAB639009374AF /* locationViewController.m */,
 				EA2AA23F18C5336A005AB606 /* MainTableViewController.h */,
 				EA2AA24018C5336A005AB606 /* MainTableViewController.m */,
 				EA2AA22B18C3E200005AB606 /* TaxTableViewController.h */,
@@ -332,7 +327,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA2AA1F518C25058005AB606 /* main.m in Sources */,
-				33E3987518CAB639009374AF /* locationViewController.m in Sources */,
 				EA2AA1F918C25058005AB606 /* TAppDelegate.m in Sources */,
 				EA2AA22D18C3E200005AB606 /* TaxTableViewController.m in Sources */,
 				EA2AA24E18C54D88005AB606 /* FMDatabase.m in Sources */,
