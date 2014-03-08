@@ -10,11 +10,10 @@
 #import "UpdateViewController.h"
 #import "TaxTableViewController.h"
 #import<CoreLocation/CoreLocation.h>
+#import "db.h"
 
 
 @interface MainTableViewController ()<CLLocationManagerDelegate>
-@property (strong, nonatomic) IBOutlet UILabel *taxRateLabel;
-@property locationViewController *locationDetector;
 @end
 
 
@@ -46,17 +45,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    manager = [[CLLocationManager alloc]init];
-    geocoder = [[CLGeocoder alloc] init];
-    manager.delegate = self;
-    manager.desiredAccuracy = kCLLocationAccuracyBest;
-    [manager startUpdatingLocation];
-    
+    db *database = [[db alloc]init];
+//    manager = [[CLLocationManager alloc]init];
+//    geocoder = [[CLGeocoder alloc] init];
+//    manager.delegate = self;
+//    manager.desiredAccuracy = kCLLocationAccuracyBest;
+//    [manager startUpdatingLocation];
+    [self.taxDetail setText:[database getTaxRateFromAbb:@"NY"]];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -177,7 +178,7 @@
             //            //pass the value to the dedial label
             //            [self.delegate changeLocation:_location];
             //            self.cityLabel.text = [NSString stringWithFormat:@"City:%@ ",placemark.locality];
-            [self.taxRateLabel setText:placemark.administrativeArea];
+            [self.taxDetail setText:placemark.administrativeArea];
             //
         }else{
             NSLog(@"%@",error.debugDescription);

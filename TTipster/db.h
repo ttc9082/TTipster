@@ -9,5 +9,7 @@
 #import "FMDatabase.h"
 
 @interface db : FMDatabase
-
+-(NSString *)getTaxRateFromAbb:(NSString *)Abb;
+-(NSMutableArray *)getAllStates;
+-(NSMutableArray *)getAllTax;
 @end

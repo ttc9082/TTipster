@@ -14,14 +14,6 @@
 @end
 
 @interface TaxTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
-{
-    sqlite3 *db;
-}
 @property (strong, nonatomic) IBOutlet UITableView *taxTable;
 @property (nonatomic,unsafe_unretained) id<taxReturnProtocol> delegate;
-@property (nonatomic,retain) NSMutableArray * stateEntries;
-@property (nonatomic,retain) NSMutableArray * taxEntries;
--(NSString *)filePath;
--(void)openDB;
--(void)copyDatabaseIfNeeded;
 @end

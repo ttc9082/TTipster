@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 //get the location
-- (IBAction)timeButtonPressed:(id)sender;
+//- (IBAction)timeButtonPressed:(id)sender;
 
 @end
 

@@ -14,4 +14,5 @@
 @interface MainTableViewController : UITableViewController <passUpdateTimeProtocol, taxReturnProtocol>
 @property (strong, nonatomic) IBOutlet UILabel *taxDetail;
 @property (strong, nonatomic) IBOutlet UILabel *updateDBDetail;
+
 @end

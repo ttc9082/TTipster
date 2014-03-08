@@ -28,8 +28,8 @@
 @property (weak, nonatomic) NSString *time;
 
 
-- (IBAction)locationButtonPressed:(id)sender;
-- (IBAction)timeButtonPressed:(id)sender;
+//- (IBAction)locationButtonPressed:(id)sender;
+//- (IBAction)timeButtonPressed:(id)sender;
 
 
 @end

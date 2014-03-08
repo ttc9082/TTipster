@@ -7,50 +7,14 @@
 //
 
 #import "TaxTableViewController.h"
+#import "db.h"
 
 @interface TaxTableViewController ()
-
+@property NSMutableArray *taxEntries;
+@property NSMutableArray *stateEntries;
 @end
 
 @implementation TaxTableViewController
-
-@synthesize stateEntries;
-@synthesize taxEntries;
-
-
-- (void) copyDatabaseIfNeeded {
-    
-    //Using NSFileManager we can perform many file system operations.
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSError *error;
-    
-    NSString *dbPath = [self filePath];
-    BOOL success = [fileManager fileExistsAtPath:dbPath];
-    if(!success) {
-        NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Tipster.sqlite"];
-        NSLog(@"%@",defaultDBPath);
-        success = [fileManager copyItemAtPath:defaultDBPath toPath:dbPath error:&error];
-        if (!success)
-            NSAssert1(0, @"Failed to create writable database file with message '%@'.", [error localizedDescription]);
-    }
-}
-
-//returns the URL of database
--(NSString *)filePath{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,YES);
-    return [[paths objectAtIndex:0] stringByAppendingString:@"/Tipster.sqlite"];
-}
-
-//open DB
--(void)openDB{
-    if (sqlite3_open([[self filePath] UTF8String], &db) != SQLITE_OK) {
-        sqlite3_close(db);
-        NSLog(@"Open DB failed.");
-    }
-    else{
-        NSLog(@"DB opened %@", [self filePath]);}
-}
-
 
 - (id)init{
     self = [super init];
@@ -64,24 +28,9 @@
 {
     
     [super viewDidLoad];
-    stateEntries = [[NSMutableArray alloc]init];
-    taxEntries = [[NSMutableArray alloc]init];
-    [self copyDatabaseIfNeeded];
-    [self openDB];
-    NSString* query = [NSString stringWithFormat:@"SELECT * FROM Tipster"];
-    sqlite3_stmt *statement;
-    if (sqlite3_prepare_v2(db, [query UTF8String], -1, &statement, nil) == SQLITE_OK) {
-        
-        while (sqlite3_step(statement)==SQLITE_ROW) {
-            char *field1 = (char *) sqlite3_column_text(statement, 0);
-            NSString *field1str = [[NSString alloc]initWithUTF8String:field1];
-            char *field2 = (char *) sqlite3_column_text(statement, 1);
-            NSString *field2str = [[NSString alloc]initWithUTF8String:field2];
-            NSString *rate = [NSString stringWithFormat:@"%@%%", field2str];
-            [stateEntries addObject:field1str];
-            [taxEntries addObject:rate];
-        }
-    }
+    self.stateEntries = [[[db alloc]init] getAllStates];
+    self.taxEntries = [[[db alloc]init] getAllTax];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -101,14 +50,13 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [stateEntries count];
+    return [self.stateEntries count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
     // Configure the cell...
     cell.textLabel.text = [self.stateEntries objectAtIndex:indexPath.row];
     cell.detailTextLabel.text = [self.taxEntries objectAtIndex:indexPath.row];
@@ -116,7 +64,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self.delegate passSelectedTaxValue:[NSString stringWithFormat:@"%@(%@)",[self.stateEntries objectAtIndex:indexPath.row],[self.taxEntries objectAtIndex:indexPath.row]]];
+    [self.delegate passSelectedTaxValue:[NSString stringWithFormat:@"%@(%@%%)",[self.stateEntries objectAtIndex:indexPath.row],[self.taxEntries objectAtIndex:indexPath.row]]];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

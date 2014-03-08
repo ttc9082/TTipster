@@ -84,7 +84,6 @@
                     <navigationItem key="navigationItem" title="Tipster Prototype" id="wdk-Ws-HpO"/>
                     <connections>
                         <outlet property="taxDetail" destination="81y-vY-bfm" id="z4e-8a-qZd"/>
-                        <outlet property="taxRateLabel" destination="81y-vY-bfm" id="e1z-5g-Ptv"/>
                         <outlet property="updateDBDetail" destination="sMg-6P-zJC" id="VhE-z5-Yas"/>
                     </connections>
                 </tableViewController>
