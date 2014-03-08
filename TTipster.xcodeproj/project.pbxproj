@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3369931118CAB06300AAA753 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3369931018CAB06300AAA753 /* CoreLocation.framework */; };
 		EA2AA1E918C25058005AB606 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2AA1E818C25058005AB606 /* Foundation.framework */; };
 		EA2AA1EB18C25058005AB606 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2AA1EA18C25058005AB606 /* CoreGraphics.framework */; };
 		EA2AA1ED18C25058005AB606 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2AA1EC18C25058005AB606 /* UIKit.framework */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3369931018CAB06300AAA753 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EA2AA1E518C25058005AB606 /* TTipster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTipster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2AA1E818C25058005AB606 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA2AA1EA18C25058005AB606 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -85,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3369931118CAB06300AAA753 /* CoreLocation.framework in Frameworks */,
 				EA2AA22718C3DA53005AB606 /* libsqlite3.dylib in Frameworks */,
 				EA2AA1EB18C25058005AB606 /* CoreGraphics.framework in Frameworks */,
 				EA2AA1ED18C25058005AB606 /* UIKit.framework in Frameworks */,
@@ -127,6 +130,7 @@
 		EA2AA1E718C25058005AB606 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3369931018CAB06300AAA753 /* CoreLocation.framework */,
 				EA2AA22618C3DA53005AB606 /* libsqlite3.dylib */,
 				EA2AA1E818C25058005AB606 /* Foundation.framework */,
 				EA2AA1EA18C25058005AB606 /* CoreGraphics.framework */,
