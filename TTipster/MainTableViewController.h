@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UpdateViewController.h"
 #import "TaxTableViewController.h"
+#import "locationViewController.h"
 
 @interface MainTableViewController : UITableViewController <passUpdateTimeProtocol, taxReturnProtocol>
 @property (strong, nonatomic) IBOutlet UILabel *taxDetail;
