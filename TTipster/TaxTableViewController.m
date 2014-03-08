@@ -52,7 +52,8 @@
 }
 
 
-- (id)init{
+- (id)initWithStyle:(UITableViewStyle)style
+{
     self = [super init];
     if (self) {
         // Custom initialization
@@ -62,10 +63,9 @@
 
 - (void)viewDidLoad
 {
-    
-    [super viewDidLoad];
     stateEntries = [[NSMutableArray alloc]init];
     taxEntries = [[NSMutableArray alloc]init];
+    [super viewDidLoad];
     [self copyDatabaseIfNeeded];
     [self openDB];
     NSString* query = [NSString stringWithFormat:@"SELECT * FROM Tipster"];
