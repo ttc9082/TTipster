@@ -9,19 +9,29 @@
 #import "locationDetector.h"
 #import<CoreLocation/CoreLocation.h>
 
+@interface locationDetector () <CLLocationManagerDelegate>
+@end
+@implementation locationDetector
+@synthesize manager;
+@synthesize geocoder;
+@synthesize location;
+@synthesize placemark;
 
-@implementation locationDetector{
-   
+-(id)init{
+    manager = [[CLLocationManager alloc]init];
+    geocoder = [[CLGeocoder alloc] init];
+    manager.delegate = self;
+    return self;
+}
+-(NSString *)getCurrentLocation{
+    [self startUpdateLocation];
+    return self.location;
 }
 
 -(void)startUpdateLocation{
-    _manager = [[CLLocationManager alloc]init];
-    _geocoder = [[CLGeocoder alloc] init];
-    _manager.delegate = self;
-    _manager.desiredAccuracy = kCLLocationAccuracyBest;
-    [_manager startUpdatingLocation];
+    manager.desiredAccuracy = kCLLocationAccuracyBest;
+    [manager startUpdatingLocation];
     NSLog(@"!!!!!!!11");
-
 }
 
 -(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
@@ -34,21 +44,17 @@
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
     NSLog(@"!!!!!!!22");
-
-    
     CLLocation *currentLocation = newLocation;
-    
-    
-    [_geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
+    [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
         if (error ==nil &&[placemarks count]>0) {
-            _placemark = [placemarks lastObject];
+            placemark = [placemarks lastObject];
             
-            _location = _placemark.administrativeArea;
+            location = placemark.administrativeArea;
             //pass the value to the dedial property
-            NSLog(@"!!!!!!!22");
+            NSLog(@"hahaha%@",self.location);
 
         }else{
-            NSLog(@"%@",error.debugDescription);
+            NSLog(@"eroor%@",error.debugDescription);
             
         }
     }];

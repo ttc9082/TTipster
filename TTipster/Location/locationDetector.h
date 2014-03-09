@@ -10,15 +10,15 @@
 #import<CoreLocation/CoreLocation.h>
 
 
-@interface locationDetector : UIViewController<CLLocationManagerDelegate>
+@interface locationDetector : NSObject<CLLocationManagerDelegate>
 
 @property NSString *location;
 @property CLLocationManager *manager;
 @property CLGeocoder *geocoder;
 @property CLPlacemark *placemark;
 
--(void)startUpdateLocation;
 
+-(NSString *)getCurrentLocation;
 
 
 

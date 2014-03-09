@@ -32,7 +32,7 @@
 		EA2AA25018C54D88005AB606 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA24818C54D88005AB606 /* FMDatabasePool.m */; };
 		EA2AA25118C54D88005AB606 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA24A18C54D88005AB606 /* FMDatabaseQueue.m */; };
 		EA2AA25318C54D88005AB606 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AA24D18C54D88005AB606 /* FMResultSet.m */; };
-		EAB5168318CBE574008DF45C /* db.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB5168218CBE574008DF45C /* db.m */; };
+		EAB5167F18CAE70E008DF45C /* db.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB5167E18CAE70E008DF45C /* db.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,8 +84,8 @@
 		EA2AA24A18C54D88005AB606 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
 		EA2AA24C18C54D88005AB606 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		EA2AA24D18C54D88005AB606 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		EAB5168118CBE574008DF45C /* db.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = db.h; path = db/db.h; sourceTree = "<group>"; };
-		EAB5168218CBE574008DF45C /* db.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = db.m; path = db/db.m; sourceTree = "<group>"; };
+		EAB5167D18CAE70E008DF45C /* db.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = db.h; sourceTree = "<group>"; };
+		EAB5167E18CAE70E008DF45C /* db.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = db.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,8 +158,11 @@
 		EA2AA1EE18C25058005AB606 /* TTipster */ = {
 			isa = PBXGroup;
 			children = (
-				EAB5168018CBE55D008DF45C /* db */,
+<<<<<<< HEAD
+				EAB5167918CAE583008DF45C /* db */,
+=======
 				3304E46318CAC7DF00F98DBA /* Location */,
+>>>>>>> e19996bbc9342cdac7ad0ea4cecd74b1430ebe02
 				EA2AA24218C54D88005AB606 /* FMDB */,
 				EA2AA23E18C52D65005AB606 /* ViewControllers */,
 				EA2AA22E18C3FE6A005AB606 /* Tipster.sqlite */,
@@ -231,11 +234,11 @@
 			path = FMDB;
 			sourceTree = "<group>";
 		};
-		EAB5168018CBE55D008DF45C /* db */ = {
+		EAB5167918CAE583008DF45C /* db */ = {
 			isa = PBXGroup;
 			children = (
-				EAB5168118CBE574008DF45C /* db.h */,
-				EAB5168218CBE574008DF45C /* db.m */,
+				EAB5167D18CAE70E008DF45C /* db.h */,
+				EAB5167E18CAE70E008DF45C /* db.m */,
 			);
 			name = db;
 			sourceTree = "<group>";
@@ -344,7 +347,11 @@
 				EA2AA1F918C25058005AB606 /* TAppDelegate.m in Sources */,
 				EA2AA22D18C3E200005AB606 /* TaxTableViewController.m in Sources */,
 				EA2AA24E18C54D88005AB606 /* FMDatabase.m in Sources */,
-				EAB5168318CBE574008DF45C /* db.m in Sources */,
+<<<<<<< HEAD
+				EAB5167F18CAE70E008DF45C /* db.m in Sources */,
+				EA2AA24118C5336A005AB606 /* MainTableViewController.m in Sources */,
+=======
+>>>>>>> e19996bbc9342cdac7ad0ea4cecd74b1430ebe02
 				EA2AA25018C54D88005AB606 /* FMDatabasePool.m in Sources */,
 				EA2AA24F18C54D88005AB606 /* FMDatabaseAdditions.m in Sources */,
 				EA2AA25318C54D88005AB606 /* FMResultSet.m in Sources */,

@@ -13,8 +13,7 @@
 #import "locationDetector.h"
 
 
-@interface MainTableViewController ()<CLLocationManagerDelegate>
-@property (strong, nonatomic) IBOutlet UILabel *taxRateLabel;
+@interface MainTableViewController ()
 
 @end
 
@@ -46,14 +45,13 @@
 {
     [super viewDidLoad];
     locationDetector *locationControl = [[locationDetector alloc] init];
+    NSString *currentL = [locationControl getCurrentLocation];
     //[locationControl setManager:[[CLLocationManager alloc]init]];
     //[locationControl setGeocoder:[[CLGeocoder alloc]init]];
     //[[locationControl manager]setDelegate:self];
-    
-    [locationControl startUpdateLocation];
     //[[locationControl manager] startUpdatingLocation];
-    NSLog(@"!!!!!!!");
-    self.taxRateLabel.text = locationControl.location;
+    NSLog(@"???%@", currentL);
+    self.taxDetail.text = currentL;
     
     
     // Uncomment the following line to preserve selection between presentations.
